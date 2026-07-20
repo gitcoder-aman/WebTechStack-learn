@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 50px auto;
+      text-align: center;
+    }
+    td, th {
+      border: 1px solid black;
+      padding: 10px;
+    }
+    input {
+      width: 100px;
+      text-align: center;
+    }
+    button {
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+<table>
+  <tr>
+    <th colspan="4">SIMPLE CALCULATOR</th>
+  </tr>
+  <tr>
+    <td>value1</td>
+    <td><input type="number" id="v1"></td>
+    <td>value2</td>
+    <td><input type="number" id="v2"></td>
+  </tr>
+  <tr>
+    <td><button onclick="add()">Addition</button></td>
+    <td><button onclick="sub()">Subtraction</button></td>
+    <td><button onclick="mul()">Multiplication</button></td>
+    <td><button onclick="div()">Division</button></td>
+  </tr>
+  <tr>
+    <td>Answer:</td>
+    <td colspan="2"><input type="text" id="result" readonly></td>
+    <td><button onclick="clearAll()">CLEAR ALL</button></td>
+  </tr>
+</table>
+
+<script>
+function add() {
+  let a = Number(document.getElementById("v1").value);
+  let b = Number(document.getElementById("v2").value);
+  document.getElementById("result").value = a + b;
+}
+
+function sub() {
+  let a = Number(document.getElementById("v1").value);
+  let b = Number(document.getElementById("v2").value);
+  document.getElementById("result").value = a - b;
+}
+
+function mul() {
+  let a = Number(document.getElementById("v1").value);
+  let b = Number(document.getElementById("v2").value);
+  document.getElementById("result").value = a * b;
+}
+
+function div() {
+  let a = Number(document.getElementById("v1").value);
+  let b = Number(document.getElementById("v2").value);
+  document.getElementById("result").value = a / b;
+}
+
+function clearAll() {
+  document.getElementById("v1").value = "";
+  document.getElementById("v2").value = "";
+  document.getElementById("result").value = "";
+}
+</script>
+
+</body>
+</html>
